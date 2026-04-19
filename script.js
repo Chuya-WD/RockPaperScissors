@@ -18,3 +18,6 @@ function getHumanChoice(){
     let choice = prompt("Elije una jugada: piedra, papel o tijera");
     return choice;
 }
+
+let humanScore = 0;
+let computerScore = 0;
