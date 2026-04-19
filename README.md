@@ -27,3 +27,4 @@ jugadores. Se debe implementarlo mediante una función donde se actualice los pu
 
 
 # Si crees que no puedes no vas a poder ni v****s
+# Finalización de este mini juego exitoso!!
