@@ -24,3 +24,6 @@ El juego debera almacenar la puntuacción de los jugadores en variables humanSco
 
 El juego debe decirdir el ganador en base a las elecciones de los 
 jugadores. Se debe implementarlo mediante una función donde se actualice los puntos e imprima un mensaje. 
+
+
+# Si crees que no puedes no vas a poder ni v****s
