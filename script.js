@@ -18,30 +18,53 @@ function getHumanChoice(){
     return choice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
 
-function playRound(humanChoice, computerChoice){
-    let hC=humanChoice.toLowerCase();
-    if(hC === computerChoice){
-        alert(`Empateeee! es un empate: computador = ${computerChoice}, usuario = ${humanChoice}`)
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice){
+        let hC=humanChoice.toLowerCase();
+
+        if(hC == computerChoice){
+            console.log(`Empate: computador = ${computerChoice} usuario = ${hC}`); 
+        }
+
+        if(hC == "piedra" && computerChoice == "papel" ){
+            computerScore++; 
+            console.log(`Ganador: COMPUTADOR = ${computerChoice} usuario = ${hC}`); 
+        }else if(hC == "piedra" && computerChoice == "tijera"){
+            humanScore++; 
+            console.log(`Ganador: computador = ${computerChoice} USUARIO = ${hC}`); 
+        }
+
+        if(hC == "papel" && computerChoice == "tijera" ){
+            computerScore++; 
+            console.log(`Ganador: COMPUTADOR = ${computerChoice} usuario = ${hC}`); 
+        }else if(hC == "papel" && computerChoice == "piedra"){
+            humanScore++; 
+            console.log(`Ganador: computador = ${computerChoice} USUARIO = ${hC}`); 
+        }
+
+        if(hC == "tijera" && computerChoice == "piedra" ){
+            computerScore++; 
+            console.log(`Ganador: COMPUTADOR = ${computerChoice} usuario = ${hC}`); 
+        }else if(hC == "tijera" && computerChoice == "papel"){
+            humanScore++; 
+            console.log(`Ganador: computador = ${computerChoice} USUARIO = ${hC}`); 
+        }
     }
-    if(hC === "piedra" && computerChoice === "papel" ){
-        computerScore++; 
-    }else if(hC === "piedra" && computerChoice === "tijera"){
-        humanChoice++; 
+    for(let i = 0; i < 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+    }
+    if(humanScore === computerScore){
+        alert(`Empateeee! es un empate: computador = ${computerScore} ganadas, usuario = ${humanScore} ganadas`);
+    }else if(humanScore > computerScore){
+        alert(`El ganador es elusuario = ${humanScore} ganadas`)
+    }else{
+        alert(`El ganador es el computador = ${computerScore} ganadas`)       
     }
 
-    if(hC === "papel" && computerChoice === "tijera" ){
-        computerScore++; 
-    }else if(hC === "papel" && computerChoice === "piedra"){
-        humanChoice++; 
-    }
-
-    if(hC === "tijera" && computerChoice === "piedra" ){
-        computerScore++; 
-    }else if(hC === "tijera" && computerChoice === "papel"){
-        humanChoice++; 
-    }
 }
 
+console.log(playGame()); 
