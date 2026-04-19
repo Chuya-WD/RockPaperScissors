@@ -21,3 +21,6 @@ El juego debe pedir al usuario que escriba su elección (piedra, papel o tijeras
 
 
 El juego debera almacenar la puntuacción de los jugadores en variables humanScore y computerScore
+
+El juego debe decirdir el ganador en base a las elecciones de los 
+jugadores. Se debe implementarlo mediante una función donde se actualice los puntos e imprima un mensaje. 

@@ -1,4 +1,3 @@
-console.log(getHumanChoice()); 
 
 function getComputerChoice(){
     //Math.random() genera un número aleatorio >=0 y <1 
@@ -6,11 +5,11 @@ function getComputerChoice(){
     let numAleatorio = Math.random();
 
     if(numAleatorio < 0.33){
-        return "Piedra";
+        return "piedra";
     }else if (numAleatorio < 0.66){
-        return "Papel";
+        return "papel";
     }
-    return "Tijera";
+    return "tijera";
 }
 
 function getHumanChoice(){
@@ -21,3 +20,28 @@ function getHumanChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    let hC=humanChoice.toLowerCase();
+    if(hC === computerChoice){
+        alert(`Empateeee! es un empate: computador = ${computerChoice}, usuario = ${humanChoice}`)
+    }
+    if(hC === "piedra" && computerChoice === "papel" ){
+        computerScore++; 
+    }else if(hC === "piedra" && computerChoice === "tijera"){
+        humanChoice++; 
+    }
+
+    if(hC === "papel" && computerChoice === "tijera" ){
+        computerScore++; 
+    }else if(hC === "papel" && computerChoice === "piedra"){
+        humanChoice++; 
+    }
+
+    if(hC === "tijera" && computerChoice === "piedra" ){
+        computerScore++; 
+    }else if(hC === "tijera" && computerChoice === "papel"){
+        humanChoice++; 
+    }
+}
+
