@@ -17,3 +17,5 @@ La computadora debe devolver piedra papel o tijera por medio de una función get
 La función getComputerChoice() retornara uno de estos valores al azar: piedra, papel o tijera. Se debe usar la función Math.random(). 
 
 
+El juego debe pedir al usuario que escriba su elección (piedra, papel o tijeras) y devolver ese valor mediante una función getHumanChoice()
+
